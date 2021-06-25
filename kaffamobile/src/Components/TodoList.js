@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from "uuid";
 
 // components
 import Todo from './Todo';
@@ -21,7 +21,11 @@ class TodoList extends Component {
         return list;
     }
 
-    addTodo(){
+    addTodo(newTodo){
+        let updateList = [...this.state.todos, newTodo]
+        this.setState({
+            todos: updateList
+        })
         //TODO
     }
 
@@ -33,9 +37,9 @@ class TodoList extends Component {
         return (
             <div className='TodoList'>
                 {this.state.todos.map(todo =>
-                    <Todo />
+                    <Todo key={uuidv4()} data={todo}/>
                 )}
-                <AddTodoForm />
+                <AddTodoForm addTodo={this.addTodo} />
             </div>
         );
     }

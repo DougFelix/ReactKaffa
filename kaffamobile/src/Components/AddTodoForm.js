@@ -18,7 +18,8 @@ class AddTodoForm extends Component {
 
     handleSubmit(e){
         e.preventDefault();
-        //TODO
+        this.props.addTodo(this.state);
+        this.setState({todo: ''});
     }
 
     render() { 
