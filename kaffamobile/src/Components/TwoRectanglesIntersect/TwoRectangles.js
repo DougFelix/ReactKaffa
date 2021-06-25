@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+import NewRectForm from './NewRectForm';
 // Considering two rectangles in a discrete grid (like pixels in a display), each defined by two points, return
 // true if they intersect, false otherwise.
 // Note: the points are included in the rectangle and have a dimension of 1 unit; the rectangle (0, 0; 1, 1) have an
@@ -26,10 +26,11 @@ class TwoRectangles extends Component {
     //     return matrix;
     // }
 
-    drawRectangle(x1,y1,x2,y2){
+    drawRectangle(rectPoints){
+        
         let rect = [];
-        for (var i = x1; i <= x2; i++) {
-            for (var j = y1; j <= y2; j++) {
+        for (var i = rectPoints.x1; i <= rectPoints.x2; i++) {
+            for (var j = rectPoints.y1; j <= rectPoints.y2; j++) {
                 rect.push(`${i},${j}`);
             }
         }
@@ -38,20 +39,28 @@ class TwoRectangles extends Component {
         this.setState({ Rectangles: Rectangles });
     }
 
-
+    getIntersection(a1,a2){
+        return  a1.filter((n) => { 
+            return a2.indexOf(n) !== -1;
+        });
+    }
 
     componentDidMount(){
         let {Rectangles} = this.state;
         this.drawRectangle(3,5,11,11);
         this.drawRectangle(7,2,13,7);
-        const found = Rectangles[0].some(r=> Rectangles[1].includes(r))
-        console.log(found);
+        this.drawRectangle(11,11,15,13);
+        // Compare both rectangle to check if they intersect
+        var intersectPoints = this.getIntersection(Rectangles[1], Rectangles[2]);
+        let newIntersect = intersectPoints.map(point => point.split(',').map( x => parseInt(x)));
+        console.log(newIntersect.length > 0 ? true : false);
+        console.log(newIntersect);
     }
 
     render() { 
         return (
             <div>
-                
+                <NewRectForm drawRectangle={this.drawRectangle} />
                 Two Rectangles
             </div>  
         );
