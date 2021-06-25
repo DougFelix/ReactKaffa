@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// CSS
+import './Todo.css';
+
 class Todo extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +20,7 @@ class Todo extends Component {
         const {data} = this.props;
         return (
             <div className='Todo'>
-                <span>{data.todo}</span>
+                <p>{data.todo}</p>
                 <div className='Todo-Icon'>
                     <span onClick={() => this.handleDelete(data.id)}><i className="far fa-trash-alt"></i></span>
                 </div>
