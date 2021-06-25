@@ -3,6 +3,7 @@ import { uuid } from 'uuidv4';
 
 // components
 import Todo from './Todo';
+import AddTodoForm from './AddTodoForm';
 
 class TodoList extends Component {
     constructor(props) {
@@ -34,6 +35,7 @@ class TodoList extends Component {
                 {this.state.todos.map(todo =>
                     <Todo />
                 )}
+                <AddTodoForm />
             </div>
         );
     }
