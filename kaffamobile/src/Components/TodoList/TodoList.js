@@ -29,15 +29,19 @@ class TodoList extends Component {
         })
     }
 
-    deleteTodo(){
-        //TODO
+    deleteTodo(idTodo){
+        console.log(idTodo);
     }
 
     render() { 
         return (
             <div className='TodoList'>
                 {this.state.todos.map(todo =>
-                    <Todo key={todo.id} data={todo}/>
+                    <Todo
+                        key={todo.id}
+                        data={todo}
+                        deleteTodo={this.deleteTodo}
+                    />
                 )}
                 <AddTodoForm addTodo={this.addTodo} />
             </div>

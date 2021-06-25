@@ -10,7 +10,7 @@ class Todo extends Component {
 
     handleDelete(id) {
         //TODO
-        console.log('deleted'+id);
+        this.props.deleteTodo(id);
     }
 
 
