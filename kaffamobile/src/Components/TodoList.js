@@ -22,11 +22,11 @@ class TodoList extends Component {
     }
 
     addTodo(newTodo){
-        let updateList = [...this.state.todos, newTodo]
+        let Todo = {...newTodo, id: uuidv4()}
+        let updateList = [...this.state.todos, Todo]
         this.setState({
             todos: updateList
         })
-        //TODO
     }
 
     deleteTodo(){
@@ -37,7 +37,7 @@ class TodoList extends Component {
         return (
             <div className='TodoList'>
                 {this.state.todos.map(todo =>
-                    <Todo key={uuidv4()} data={todo}/>
+                    <Todo key={todo.id} data={todo}/>
                 )}
                 <AddTodoForm addTodo={this.addTodo} />
             </div>

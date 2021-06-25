@@ -8,18 +8,19 @@ class Todo extends Component {
         this.handleDelete = this.handleDelete.bind(this);
     }
 
-    handleDelete() {
+    handleDelete(id) {
         //TODO
-        console.log('deleted');
+        console.log('deleted'+id);
     }
 
 
     render() { 
+        const {data} = this.props;
         return (
             <div className='Todo'>
-                <span>TODO</span>
+                <span>{data.todo}</span>
                 <div className='Todo-Icon'>
-                    <span onClick={this.handleDelete}><i className="far fa-trash-alt"></i></span>
+                    <span onClick={() => this.handleDelete(data.id)}><i className="far fa-trash-alt"></i></span>
                 </div>
             </div>
         );
