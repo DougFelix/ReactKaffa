@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { uuid } from 'uuidv4';
 
 // components
 import Todo from './Todo';
@@ -9,6 +10,8 @@ class TodoList extends Component {
         this.state = {
             todos: this.mount()
         }
+        this.addTodo = this.addTodo.bind(this);
+        this.deleteTodo = this.deleteTodo.bind(this);
     }
 
     // Create new list of ToDos or load existing one
@@ -17,10 +20,20 @@ class TodoList extends Component {
         return list;
     }
 
+    addTodo(){
+        //TODO
+    }
+
+    deleteTodo(){
+        //TODO
+    }
+
     render() { 
         return (
             <div className='TodoList'>
-                <Todo />
+                {this.state.todos.map(todo =>
+                    <Todo />
+                )}
             </div>
         );
     }
