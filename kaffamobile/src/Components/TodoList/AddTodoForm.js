@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //CSS
-import './AddTodoForm.css';
+import './Styles/AddTodoForm.css';
 
 class AddTodoForm extends Component {
     constructor(props) {

@@ -6,7 +6,7 @@ import Todo from './Todo';
 import AddTodoForm from './AddTodoForm';
 
 // CSS
-import './TodoList.css';
+import './Styles/TodoList.css';
 
 class TodoList extends Component {
     constructor(props) {
