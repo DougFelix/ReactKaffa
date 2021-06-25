@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 // Import each exercise solution
 import TodoList from './TodoList/TodoList';
+import TwoRectangles from './TwoRectanglesIntersect/TwoRectangles';
 // CSS
 import './TestHome.css';
 
@@ -16,7 +17,7 @@ class TestHome extends Component {
             <div className='TestHome'>
                 <Navbar />
                 <div className='TestHome-Page'>           
-                    <TodoList />
+                    <TwoRectangles />
                 </div>
             </div>
         );
