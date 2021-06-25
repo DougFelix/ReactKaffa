@@ -1,0 +1,11 @@
+.TestHome {
+    overflow:auto;
+}
+
+.TestHome-Page {
+    height: 90%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

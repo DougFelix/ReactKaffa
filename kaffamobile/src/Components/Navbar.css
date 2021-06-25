@@ -1,0 +1,32 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 6vh;
+    background: lightblue;
+    
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.Navbar-Logo {
+    margin-right: 15px;
+    padding: 0 13px;
+    font-size: 22px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Navbar-Logo a,
+.Navbar-Tabs a {
+    color: black;
+    text-decoration: none;
+}
+
+.Navbar-Tabs {
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: darkslategray;
+}
