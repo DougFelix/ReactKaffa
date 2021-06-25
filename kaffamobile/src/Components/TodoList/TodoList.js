@@ -30,7 +30,10 @@ class TodoList extends Component {
     }
 
     deleteTodo(idTodo){
-        console.log(idTodo);
+        let filteredTodoList = this.state.todos.filter(
+            todo => todo.id !== idTodo
+        );
+        this.setState({todos: filteredTodoList});
     }
 
     render() { 
