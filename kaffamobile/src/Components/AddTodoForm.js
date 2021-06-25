@@ -7,16 +7,27 @@ class AddTodoForm extends Component {
             todo: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleSubmit(){
+    handleChange(e){
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
         //TODO
     }
 
     render() { 
         return (
             <div className='AddTodoForm'>
-                <span>ADD BUTTON</span>
+                <form onSubmit={this.handleSubmit}>
+                    <input name='todo' value={this.state.todo} onChange={this.handleChange}></input>
+                    <button>Add</button>
+                </form>
             </div>
         );
     }
