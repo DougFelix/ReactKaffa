@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { v4 as uuidv4 } from "uuid";
 
 //CSS
 
@@ -6,8 +7,10 @@ class CompareRectForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            rect1: this.props.Rectangles[0],
-            rect2: this.props.Rectangles[1]
+            rect1: Object.keys(this.props.Rectangles)[0],
+            rect2: Object.keys(this.props.Rectangles)[1],
+            intersect: '',
+            area: ''
         }
         this.defaultState = this.state;
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,16 +19,21 @@ class CompareRectForm extends Component {
 
     handleChange(e){
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
+            intersect: '',
+            area: ''
         });
     }
 
     handleSubmit(e){
         e.preventDefault();
-        var intersectPoints = this.getIntersection(this.state.rect1, this.state.rect2);
+        let {Rectangles} = this.props;
+        var intersectPoints = this.getIntersection(Rectangles[this.state.rect1]['points'], Rectangles[this.state.rect2]['points']);
         let newIntersect = intersectPoints.map(point => point.split(',').map( x => parseInt(x)));
-        console.log(newIntersect.length > 0 ? true : false);
-        console.log(newIntersect);
+        this.setState({
+            intersect: newIntersect.length > 0 ? 'true' : 'false',
+            area: newIntersect.length
+        })
     }
 
     getIntersection(a1,a2){
@@ -35,23 +43,29 @@ class CompareRectForm extends Component {
     }
 
     render() {
+        let {area, intersect} = this.state;
         let options = [];
         for(let rect in this.props.Rectangles) { 
-            options.push(<option key={rect.key} value={rect}>{rect.key}</option>)
+            options.push(<option key={uuidv4()} value={rect}>{rect}</option>)
         }
 
         return (
             <div className='CompareRectForm'>
                 <form onSubmit={this.handleSubmit}>
-                    <select name='rect1' value='' onChange={this.handleChange}>
+                    <select name='rect1' value={this.state.rect1} onChange={this.handleChange}>
                         {options}
                     </select>
-                    <select name='rect2' value={this.state.rect1} onChange={this.handleChange}>
+                    <select name='rect2' value={this.state.rect2} onChange={this.handleChange}>
                         {options}
                     </select>
                     <button>Add</button>
                 </form>
-                <p>TEXT</p>
+                {area !== '' &&
+                <div className='CompareRectForm-Info'> 
+                    <p>Area:{area}</p>
+                    <p>Intersect:{intersect}</p>
+                </div>
+                }
             </div>
         );
     }
