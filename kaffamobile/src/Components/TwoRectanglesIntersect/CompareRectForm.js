@@ -61,10 +61,10 @@ class CompareRectForm extends Component {
                     <button>Compute!</button>
                 </form>
                 {area !== '' &&
-                <div className='CompareRectForm-Info'> 
-                    <p>Intersect: {intersect}</p>
-                    <p>Area of intersection: {area}</p>
-                </div>
+                    <div className='CompareRectForm-Info'> 
+                        <p>Intersect: {intersect}</p>
+                        <p>Area of intersection: {area}</p>
+                    </div>
                 }
             </div>
         );

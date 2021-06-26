@@ -38,20 +38,28 @@ class NewRectForm extends Component {
     render() { 
         return (
             <div className='NewRectForm'>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <span>Coordinate 1:</span>
-                        <label htmlFor="x1">x</label>
-                        <input id='x1' name='x1' value={this.state.x1} onChange={this.handleChange} type='number' min={0} max={15} required></input>
-                        <label htmlFor="y1">y</label>
-                        <input id='y1' name='y1' value={this.state.y1} onChange={this.handleChange} type='number' min={0} max={15} required></input>
+                <form className='NewRectForm-Form' onSubmit={this.handleSubmit}>
+                    <div className='NewRectForm-title'>Coordinate 1:</div>
+                    <div className='NewRectForm-xy'>
+                        <div className='NewRectForm-p'>
+                            <label htmlFor="x1">X : </label>
+                            <input id='x1' name='x1' value={this.state.x1} onChange={this.handleChange} type='number' min={0} max={15} required></input>
+                        </div>
+                        <div className='NewRectForm-p'>
+                            <label htmlFor="y1">Y : </label>
+                            <input id='y1' name='y1' value={this.state.y1} onChange={this.handleChange} type='number' min={0} max={15} required></input>
+                        </div>
                     </div>
-                    <div>
-                        <span>Coordinate 2:</span>
-                        <label htmlFor="x2">x</label>
-                        <input id='x2' name='x2' value={this.state.x2} onChange={this.handleChange} type='number' min={0} max={15} required></input>
-                        <label htmlFor="y2">y</label>
-                        <input id='y2' name='y2' value={this.state.y2} onChange={this.handleChange} type='number' min={0} max={15} required></input>
+                    <div className='NewRectForm-title'>Coordinate 2:</div>
+                    <div className='NewRectForm-xy'>
+                        <div className='NewRectForm-p'>
+                            <label htmlFor="x2">X : </label>
+                            <input id='x2' name='x2' value={this.state.x2} onChange={this.handleChange} type='number' min={0} max={15} required></input>
+                        </div>
+                        <div className='NewRectForm-p'>
+                            <label htmlFor="y2">Y : </label>
+                            <input id='y2' name='y2' value={this.state.y2} onChange={this.handleChange} type='number' min={0} max={15} required></input>
+                        </div>
                     </div>
                     <button>Add</button>
                 </form>

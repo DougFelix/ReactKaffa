@@ -2,6 +2,21 @@
     margin: 1rem;
 }
 
+.Rectangles-Draw {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 1rem;
+}
+
 .Table i {
-    padding: 1px;
+    font-size: larger;
+}
+
+.Rectangles-List {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0 0 1rem 1rem;
+    text-align: left;
+}
+
+.Rectangles-List-Item{
+    padding: 0.2rem;
 }

@@ -9,3 +9,19 @@
     font-size: 1.1rem;
     font-family: 'Ubuntu', sans-serif;
 }
+
+.TwoRectangles-Title {
+    
+    font-weight: normal;
+    font-size: 2.6rem;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    font-family: "Quicksand", sans-serif;
+}
+.CompareRectForm-Warning {
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}

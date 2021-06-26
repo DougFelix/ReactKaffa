@@ -12,7 +12,9 @@ class Table extends Component {
 
         for (var rect in Rectangles) {
             listRect.push(
-                <li key={rect}>{`${rect}: [${Rectangles[rect]['x1']}, ${Rectangles[rect]['y1']}] [${Rectangles[rect]['x2']}, ${Rectangles[rect]['y2']}]`}</li>
+                <li className='Rectangles-List-Item' key={rect}>
+                    {`${rect}: [${Rectangles[rect]['x1']}, ${Rectangles[rect]['y1']}] [${Rectangles[rect]['x2']}, ${Rectangles[rect]['y2']}]`}
+                </li>
             );
         }
         return listRect;
@@ -41,7 +43,7 @@ class Table extends Component {
         }
 
         let footer =[];
-        footer.push(<th key={`#`}>#</th>);
+        footer.push(<th key={`#`} style={{fontSize: 10}}>Y / X</th>);
         for (let j = 0; j < table[0].length; j++) {
             footer.push(<th key={`${j}x`}>{j}</th>);
         }
@@ -54,7 +56,8 @@ class Table extends Component {
         return map;
     }
 
-    render() {        
+    render() {
+        let {Rectangles} = this.props;  
         let map = this.gridMaker();
         let listRect = this.listMaker();
 
@@ -65,9 +68,11 @@ class Table extends Component {
                         {map}
                     </tbody>
                 </table>
-                <ul className='Rectangles-List'>
-                    {listRect}
-                </ul>
+                {Object.keys(Rectangles).length > 0 &&
+                    <ul className='Rectangles-List'>
+                        {listRect}
+                    </ul>
+                }
             </div>
         );
     }

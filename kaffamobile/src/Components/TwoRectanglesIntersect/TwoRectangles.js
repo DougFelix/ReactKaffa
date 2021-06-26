@@ -110,7 +110,7 @@ class TwoRectangles extends Component {
         let {Rectangles, table} = this.state;
         return (
             <div className='TwoRectangles'>
-
+                <h2 className='TwoRectangles-Title'>Rectangles</h2>
                 {/* FORM TO ADD NEW RECTANGLE */}
                 <NewRectForm Rectangles={Rectangles} addRectangle={this.addRectangle} />
                 
@@ -118,8 +118,13 @@ class TwoRectangles extends Component {
                 <Table Rectangles={Rectangles} table={table}/>
                 
                 {/* FORM TO ANALYZE TO RECTANGLE */}
-                {Object.keys(Rectangles).length >= 2 &&
-                    <CompareRectForm Rectangles={Rectangles} />
+                {Object.keys(Rectangles).length >= 2
+                ? <CompareRectForm Rectangles={Rectangles} />
+                
+                : 
+                    <div className='CompareRectForm-Warning'>
+                        Create at least two rectangles.
+                    </div>
                 }
             </div>  
         );
