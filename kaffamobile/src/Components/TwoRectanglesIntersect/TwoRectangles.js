@@ -15,7 +15,6 @@ class TwoRectangles extends Component {
         this.addRectangle = this.addRectangle.bind(this);
     }
 
-
     addRectangle(rectPoints){
         let rect = [];
         for (var i = rectPoints.x1; i <= rectPoints.x2; i++) {
@@ -42,8 +41,7 @@ class TwoRectangles extends Component {
         let {Rectangles} = this.state;
         return (
             <div>
-                <NewRectForm addRectangle={this.addRectangle} />
-                <MapRectangles Rectangles={Rectangles} />
+                <NewRectForm Rectangles={this.state.Rectangles} addRectangle={this.addRectangle} />
                 {Object.keys(Rectangles).length >= 2 &&
                     <CompareRectForm Rectangles={this.state.Rectangles} />
                 }
