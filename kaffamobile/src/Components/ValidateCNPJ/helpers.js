@@ -32,9 +32,57 @@ function validateCNPJ(cnpj) {
         return false;
     }
 
-    //TODO
+    // CHECKING Validation Algorithm from https://pt.wikipedia.org/wiki/Cadastro_Nacional_da_Pessoa_Jur%C3%ADdica
 
-    return ;
+    // Create array with only digits
+    const stringDigits = cnpj.match(/\d/g);
+    // Convert to integer
+    const digits = stringDigits.map((x) => parseInt(x));
+
+    // Check if number of digits is 14
+    if (digits.length !== 14) {
+        return false;
+    }
+
+    // CHECKING VERIFICATION DIGITS
+    // FIRST DIGIT - numbers:   5	4	3	2	9	8	7	6	5	4	3	2
+    let x1 = digits[0]*5 + digits[1]*4 + digits[2]*3 + digits[3]*2 +
+                digits[4]*9 + digits[5]*8 + digits[6]*7 + digits[7]*6 + digits[8]*5 + digits[9]*4 + digits[10]*3 + digits[11]*2;
+    
+    let r1 = x1 % 11;
+
+    // IF modulo  if less than 2, then x1 = 0
+    if (r1 < 2) {
+        x1 = 0;
+    } else {
+        x1 = 11 - r1;
+    }
+    console.log(digits[12], x1);
+    // TEST FIRST DIGIT
+    if (digits[12] !== x1) {
+
+        return false;
+    }
+    // SECOND DIGIT - numbers:  6	5	4	3	2	9	8	7	6	5	4	3	2
+    let x2 = digits[0]*6 + digits[1]*5 + digits[2]*4 + digits[3]*3 + digits[4]*2 + 
+                digits[5]*9 + digits[6]*8 + digits[7]*7 + digits[8]*6 + digits[9]*5 + digits[10]*4 + digits[11]*3 + digits[12]*2;
+    
+    let r2 = x2 % 11;
+
+    // IF modulo  if less than 2, then x2 = 0
+    if (r2 < 2) {
+        x2 = 0;
+    } else {
+        x2 = 11 - r2;
+    }
+
+    console.log(digits[13], x2);
+    // TEST SECOND DIGIT
+    if (digits[13] !== x2) {
+        return false;
+    }
+
+    return true;
 }
 
 export {validateCNPJ};

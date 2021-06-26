@@ -8,7 +8,8 @@ class CNPJ extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cnpj: ''
+            cnpj: '',
+            isValid: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -17,7 +18,8 @@ class CNPJ extends Component {
     // FORM FUNCTIONS
     handleChange(e){
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
+            isValid: ''
         });
     }
 
@@ -25,6 +27,7 @@ class CNPJ extends Component {
         e.preventDefault();
         //TODO
         let isValid = validateCNPJ(this.state.cnpj);
+        this.setState({isValid: isValid});
     }
 
     render() { 
@@ -35,6 +38,12 @@ class CNPJ extends Component {
                     <input name='cnpj' value={this.state.cnpj} type='text' onChange={this.handleChange} required></input>
                     <button>Validate CNPJ</button>
                 </form>
+                {this.state.isValid !== '' 
+                ? this.state.isValid === true
+                    ? 'VALID CNPJ'
+                    : 'INVALID CNPJ'
+                : ''
+                }
             </div>
         );
     }
