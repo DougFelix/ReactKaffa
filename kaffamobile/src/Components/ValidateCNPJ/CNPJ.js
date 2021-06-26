@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { validateCNPJ } from './helpers';
 
 //CSS
 import './CNPJ.css';
@@ -23,6 +24,7 @@ class CNPJ extends Component {
     handleSubmit(e){
         e.preventDefault();
         //TODO
+        let isValid = validateCNPJ(this.state.cnpj);
     }
 
     render() { 
@@ -30,7 +32,7 @@ class CNPJ extends Component {
             <div className='CNPJ'>
                 <form className='CNPJ-Form' onSubmit={this.handleSubmit}>
                     <div className='CNPJ-title'>CNPJ</div>
-                    <input name='cnpj' value={this.state.cnpj} onChange={this.handleChange} required></input>
+                    <input name='cnpj' value={this.state.cnpj} type='text' onChange={this.handleChange} required></input>
                     <button>Validate CNPJ</button>
                 </form>
             </div>
