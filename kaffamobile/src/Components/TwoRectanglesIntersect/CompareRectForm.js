@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { v4 as uuidv4 } from "uuid";
 
 //CSS
+import './Styles/CompareRectForm.css';
 
 class CompareRectForm extends Component {
     constructor(props) {
@@ -51,10 +52,11 @@ class CompareRectForm extends Component {
 
         return (
             <div className='CompareRectForm'>
-                <form onSubmit={this.handleSubmit}>
+                <form className='CompareRectForm-Form' onSubmit={this.handleSubmit}>
                     <select name='rect1' value={this.state.rect1} onChange={this.handleChange}>
                         {options}
                     </select>
+                    <i class="fas fa-times"></i>
                     <select name='rect2' value={this.state.rect2} onChange={this.handleChange}>
                         {options}
                     </select>
@@ -62,8 +64,8 @@ class CompareRectForm extends Component {
                 </form>
                 {area !== '' &&
                     <div className='CompareRectForm-Info'> 
-                        <p>Intersect: {intersect}</p>
-                        <p>Area of intersection: {area}</p>
+                        <p>Intersect:<span> {intersect}</span></p>
+                        <p>Area of intersection:<span>{area}</span></p>
                     </div>
                 }
             </div>

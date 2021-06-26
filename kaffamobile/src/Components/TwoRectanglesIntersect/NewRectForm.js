@@ -61,7 +61,7 @@ class NewRectForm extends Component {
                             <input id='y2' name='y2' value={this.state.y2} onChange={this.handleChange} type='number' min={0} max={15} required></input>
                         </div>
                     </div>
-                    <button>Add</button>
+                    <button>Add Rectangle</button>
                 </form>
             </div>
         );

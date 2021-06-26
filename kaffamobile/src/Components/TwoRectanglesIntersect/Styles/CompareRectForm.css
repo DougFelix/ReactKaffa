@@ -1,0 +1,57 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+    opacity: 1;
+}
+
+.CompareRectForm {
+    padding-bottom: 2rem;
+}
+
+.CompareRectForm-Info {
+    text-align: center;
+}
+
+.CompareRectForm-Info span {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+}
+
+.CompareRectForm-p label {
+    font-weight: bold;
+}
+
+.CompareRectForm button {
+    padding: 0 1.3rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: background 0.4s ease-out;
+    outline: none;
+}
+
+.CompareRectForm button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+.CompareRectForm select,
+.CompareRectForm button {
+    letter-spacing: 0.1rem;
+    font-family: "Quicksand", sans-serif;
+    height: 1.5rem;
+}
+
+.CompareRectForm i {
+    margin: 0.4rem;
+    color: black;
+}
+
+.CompareRectForm select {
+    border-radius: 5px;
+    border: transparent;
+    margin-bottom: 0.5rem;
+}
