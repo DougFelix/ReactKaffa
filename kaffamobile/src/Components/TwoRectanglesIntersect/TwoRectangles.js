@@ -3,26 +3,35 @@ import React, { Component } from 'react';
 // Import components
 import NewRectForm from './NewRectForm';
 import CompareRectForm from './CompareRectForm';
-import MapRectangles from './MapRectangles';
+import Table from './Table';
 
 
 class TwoRectangles extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            Rectangles: {}
+            Rectangles: {},
+            table: this.mount()
         }
         this.addRectangle = this.addRectangle.bind(this);
     }
 
     addRectangle(rectPoints){
         let rect = [];
-        for (var i = rectPoints.x1; i <= rectPoints.x2; i++) {
-            for (var j = rectPoints.y1; j <= rectPoints.y2; j++) {
+        let x = [rectPoints.x1, rectPoints.x2].sort(function(a, b) {
+            return a - b;
+        });;
+        let y = [rectPoints.y1, rectPoints.y2].sort(function(a, b) {
+            return a - b;
+        });;
+
+        for(let i = parseInt(x[0]); i <= parseInt(x[1]); i++) {
+            for(let j = parseInt(y[0]); j <= parseInt(y[1]); j++) {
                 // getting each point inside of rectangle
                 rect.push(`${i},${j}`);
             }
         }
+
         let {Rectangles} = this.state;
         // Copying State
         let update = {...Rectangles};
@@ -33,17 +42,64 @@ class TwoRectangles extends Component {
             points: rect,
             ...rectPoints
         };
+        
+        // DRAW NEW RECTANGLE
+        let table = this.drawRect(rectPoints);
+
         // Updating State
-        this.setState({Rectangles: update});
+        this.setState({
+            Rectangles: update,
+            table: table
+        });
     }
 
+    //MAP FUNCTIONS
+    mount(){
+        var matrix = [];
+        for (var i = 0; i < 16; i++) {
+            matrix[i] = new Array(16);
+            for (var j = 0; j < 16; j++) {
+                matrix[i][j] = 0;
+            }
+        }
+        return matrix;
+    }
+
+    drawRect(rectPoints){
+        let table = [...this.state.table];
+        let x = [rectPoints.x1, rectPoints.x2].sort(function(a, b) {
+            return a - b;
+        });;
+        let y = [rectPoints.y1, rectPoints.y2].sort(function(a, b) {
+            return a - b;
+        });;
+        
+        for(let i = parseInt(x[0]); i <= parseInt(x[1]); i++) {
+            table[i][rectPoints.y1] += 1;
+            table[i][rectPoints.y2] += 1;
+        }
+        for(let j = parseInt(y[0]); j <= parseInt(y[1]); j++) {
+            table[rectPoints.x1][j] += 1;
+            table[rectPoints.x2][j] += 1;
+        }
+
+        table[rectPoints.x1][rectPoints.y1] -= 1;
+        table[rectPoints.x1][rectPoints.y2] -= 1;
+        table[rectPoints.x2][rectPoints.y1] -= 1;
+        table[rectPoints.x2][rectPoints.y2] -= 1;
+
+        return table;
+    }
+
+
     render() {
-        let {Rectangles} = this.state;
+        let {Rectangles, table} = this.state;
         return (
             <div>
-                <NewRectForm Rectangles={this.state.Rectangles} addRectangle={this.addRectangle} />
+                <NewRectForm Rectangles={Rectangles} addRectangle={this.addRectangle} />
+                <Table Rectangles={Rectangles} table={table}/>
                 {Object.keys(Rectangles).length >= 2 &&
-                    <CompareRectForm Rectangles={this.state.Rectangles} />
+                    <CompareRectForm Rectangles={Rectangles} />
                 }
             </div>  
         );

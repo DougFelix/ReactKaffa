@@ -58,12 +58,12 @@ class CompareRectForm extends Component {
                     <select name='rect2' value={this.state.rect2} onChange={this.handleChange}>
                         {options}
                     </select>
-                    <button>Add</button>
+                    <button>Compute!</button>
                 </form>
                 {area !== '' &&
                 <div className='CompareRectForm-Info'> 
-                    <p>Area:{area}</p>
-                    <p>Intersect:{intersect}</p>
+                    <p>Intersect: {intersect}</p>
+                    <p>Area of intersection: {area}</p>
                 </div>
                 }
             </div>
