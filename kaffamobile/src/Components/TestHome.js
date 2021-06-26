@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 // Import each exercise solution
 //import TodoList from './TodoList/TodoList';
-import TwoRectangles from './TwoRectanglesIntersect/TwoRectangles';
+//import TwoRectangles from './TwoRectanglesIntersect/TwoRectangles';
+import WorldClock from './RestClientWorldClock/WorldClock';
+
 // CSS
 import './TestHome.css';
 
@@ -17,7 +19,7 @@ class TestHome extends Component {
             <div className='TestHome'>
                 <Navbar />
                 <div className='TestHome-Page'>           
-                    <TwoRectangles />
+                    <WorldClock />
                 </div>
             </div>
         );
