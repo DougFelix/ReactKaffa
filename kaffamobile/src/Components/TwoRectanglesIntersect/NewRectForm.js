@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //CSS
-import './NewRectForm.css';
+import './Styles/NewRectForm.css';
 
 class NewRectForm extends Component {
     constructor(props) {
