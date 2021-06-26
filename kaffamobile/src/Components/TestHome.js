@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Navbar from './Navbar';
 // Import each exercise solution
-import TodoList from './TodoList/TodoList';
+//import TodoList from './TodoList/TodoList';
 import TwoRectangles from './TwoRectanglesIntersect/TwoRectangles';
 // CSS
 import './TestHome.css';
