@@ -25,7 +25,7 @@ class NewRectForm extends Component {
     handleSubmit(e){
         e.preventDefault();
         let newRect = this.state;
-        this.props.drawRectangle(newRect);
+        this.props.addRectangle(newRect);
         this.setState({
             x1: 0,
             y1: 0,
