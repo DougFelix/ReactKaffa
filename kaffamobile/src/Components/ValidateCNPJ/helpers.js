@@ -32,7 +32,7 @@ function validateCNPJ(cnpj) {
         return false;
     }
 
-    // CHECKING Validation Algorithm from https://pt.wikipedia.org/wiki/Cadastro_Nacional_da_Pessoa_Jur%C3%ADdica
+    // CHECKING Validation Algorithm from https://souforce.cloud/regra-de-validacao-para-cpf-e-cnpj/
 
     // Create array with only digits
     const stringDigits = cnpj.match(/\d/g);
@@ -41,6 +41,12 @@ function validateCNPJ(cnpj) {
 
     // Check if number of digits is 14
     if (digits.length !== 14) {
+        return false;
+    }
+
+    // Check if all digits are the same
+    let count = [...new Set(digits)]
+    if (count.length === 1) {
         return false;
     }
 
@@ -57,7 +63,7 @@ function validateCNPJ(cnpj) {
     } else {
         x1 = 11 - r1;
     }
-    console.log(digits[12], x1);
+
     // TEST FIRST DIGIT
     if (digits[12] !== x1) {
 
@@ -76,7 +82,6 @@ function validateCNPJ(cnpj) {
         x2 = 11 - r2;
     }
 
-    console.log(digits[13], x2);
     // TEST SECOND DIGIT
     if (digits[13] !== x2) {
         return false;
