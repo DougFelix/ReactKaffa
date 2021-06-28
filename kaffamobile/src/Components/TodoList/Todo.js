@@ -20,7 +20,7 @@ class Todo extends Component {
         const {data} = this.props;
         return (
             <div className='Todo'>
-                <p>{data.todo}</p>
+                <div className='Todo-text'>{data.todo}</div>
                 <div className='Todo-Icon'>
                     <span onClick={() => this.handleDelete(data.id)}><i className="far fa-trash-alt"></i></span>
                 </div>

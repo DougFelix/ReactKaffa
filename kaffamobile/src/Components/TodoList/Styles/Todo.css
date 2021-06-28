@@ -11,12 +11,13 @@
     position: relative;
     transition: opacity 500ms ease-in-out;
 }
-.Todo p {
+
+.Todo-text {
     overflow-wrap: break-word;
     word-wrap: break-word;
-    hyphens: auto;
     max-width: 300px;
     text-align: left;
+    
 }
 
 .Todo-Icon {

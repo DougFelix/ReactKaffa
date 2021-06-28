@@ -18,15 +18,5 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
     font-family: "Quicksand", sans-serif;
-
-    /* background: linear-gradient(90deg, 
-    #FE0000 16.66%,
-    #FD8C00 16.66%, 33.32%,
-    #FFE500 33.32%, 49.98%,
-    #119F0B 49.98%, 66.64%,
-    #0644B3 66.64%, 83.3%,
-    #C22EDC 83.3%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    margin-bottom: 2rem;
 }
