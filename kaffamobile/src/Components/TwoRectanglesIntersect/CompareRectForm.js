@@ -52,6 +52,7 @@ class CompareRectForm extends Component {
 
         return (
             <div className='CompareRectForm'>
+                <p>Select two rectangles to compute:</p>
                 <form className='CompareRectForm-Form' onSubmit={this.handleSubmit}>
                     <select name='rect1' value={this.state.rect1} onChange={this.handleChange}>
                         {options}
@@ -63,7 +64,7 @@ class CompareRectForm extends Component {
                     <button>Compute!</button>
                 </form>
                 {area !== '' &&
-                    <div className='CompareRectForm-Info'> 
+                    <div className='CompareRectForm-Info'>
                         <p>Intersect:<span> {intersect}</span></p>
                         <p>Area of intersection:<span>{area}</span></p>
                     </div>

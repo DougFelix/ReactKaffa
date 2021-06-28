@@ -9,15 +9,17 @@ class WorldClock extends Component {
         super(props);
         this.state = {
             localDate: '',
-            localTime: ''
+            localTime: '',
+            utcDate: '',
+            utcTime: ''
         }
         this.getTime = this.getTime.bind(this);
     }
 
     async getTime() {
         try {
-            let data = await axios.get('http://worldclockapi.com/api/json/utc/now');
-            let utcDateTime = data.data.currentDateTime;
+            let response = await axios.get('http://worldclockapi.com/api/json/utc/now');
+            let utcDateTime = response.data.currentDateTime;
 
             this.setState({
                 // LOCAL DATE TIME
