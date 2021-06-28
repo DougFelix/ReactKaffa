@@ -1,32 +1,49 @@
 .Navbar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 6vh;
     background: lightblue;
-    
     font-family: 'Ubuntu', sans-serif;
 }
-
-.Navbar-Logo {
-    margin-right: 15px;
-    padding: 0 13px;
-    font-size: 22px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.Navbar-Logo a,
-.Navbar-Tabs a {
-    color: black;
+.newA {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 20px;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.4s ease-out;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
 }
 
-.Navbar-Tabs {
-    padding: 1rem 2rem;
+.newA:after {
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    width: 0%;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.newA:hover:after {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    color: darkslategray;
+    left: 0%;
+    
+}
+
+.newA:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.navActive {
+    color: black;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.navbar {
+    padding: 0;
 }

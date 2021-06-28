@@ -16,6 +16,7 @@ class ERDiagram extends Component {
                     orders LEFT JOIN ordered_producs 
                     ON orders.id = ordered_producs.order_id
                     GROUP BY orders.id;
+                    <hr/>
                     <h4>Which indexes should be created in this model?</h4>
                     Primary keys (PK), Foreign Keys (FK), CPF and Products name.
                 </div>
