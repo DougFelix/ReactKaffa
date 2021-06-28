@@ -12,7 +12,7 @@ import WorldClock from './RestClientWorldClock/WorldClock';
 import ERDiagram from './ERDiagram/ERDiagram';
 
 // CSS
-import './TestHome.css';
+import './Home.css';
 
 const Home = () => <p className='Home'> HOME PAGE </p>;
 

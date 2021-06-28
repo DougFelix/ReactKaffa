@@ -34,14 +34,16 @@ class CNPJ extends Component {
         return (
             <div className='CNPJ'>
                 <form className='CNPJ-Form' onSubmit={this.handleSubmit}>
-                    <div className='CNPJ-title'>CNPJ</div>
+                    <div className='CNPJ-Title'>CNPJ</div>
                     <input name='cnpj' value={this.state.cnpj} type='text' onChange={this.handleChange} required></input>
-                    <button>Validate CNPJ</button>
+                    <button>Check</button>
                 </form>
                 {this.state.isValid !== '' 
-                ? this.state.isValid === true
+                ? <div> {this.state.isValid === true
                     ? 'VALID CNPJ'
                     : 'INVALID CNPJ'
+                    }
+                    </div>
                 : ''
                 }
             </div>

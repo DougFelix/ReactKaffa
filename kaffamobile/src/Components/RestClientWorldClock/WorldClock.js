@@ -38,6 +38,7 @@ class WorldClock extends Component {
     render() { 
         return (
             <div className='WorldClock'>
+            <div className='WorldClock-Title'>World Clock</div>
                 <div className='WorldClock-UTC'>
                     <i className="far fa-clock"></i> UTC: 
                     <div className="WorldClock-Date">{this.state.utcDate}</div>

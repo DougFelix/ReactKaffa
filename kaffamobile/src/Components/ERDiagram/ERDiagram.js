@@ -9,6 +9,7 @@ class ERDiagram extends Component {
     render() { 
         return (
             <div className='ERDiagram'>
+                <div className='ERDiagram-Title'>Entity Relationship Diagram</div>
                 <img className='ERDiagram-img' src={ERImage} alt='ERDiagram'/>
                 <div className='ERDiagram-awnsers'>
                     <h4>SQL: list ORDERS with number of items</h4>

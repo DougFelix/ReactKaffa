@@ -3,12 +3,9 @@ input[type=number]::-webkit-outer-spin-button {
     opacity: 1;
 }
 
-.CompareRectForm {
-    padding-bottom: 2rem;
-}
-
 .CompareRectForm-Info {
     text-align: center;
+    margin-top: 2rem;
 }
 
 .CompareRectForm-Info span {
@@ -42,7 +39,6 @@ input[type=number]::-webkit-outer-spin-button {
 .CompareRectForm button {
     letter-spacing: 0.1rem;
     font-family: "Quicksand", sans-serif;
-    height: 1.5rem;
 }
 
 .CompareRectForm i {

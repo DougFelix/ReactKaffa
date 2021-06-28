@@ -2,10 +2,64 @@
     margin: 4rem auto;
     padding: 2rem 2rem 2rem;
     max-width: 600px;
-    background: #66ff7f;
-    color: #000;
+    background: #5bdf7c;
+    color: #fff;
     box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
     overflow: hidden;
     font-size: 1.1rem;
     font-family: 'Ubuntu', sans-serif;
+}
+
+
+.CNPJ {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 2rem;
+}
+
+
+.CNPJ-Title {
+    font-weight: normal;
+    font-size: 2.6rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 2rem;
+}
+
+.NewRectForm-title {
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.CNPJ button {
+    padding: 0 1.3rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background 0.4s ease-out;
+    outline: none;
+    align-content: center;
+}
+
+.CNPJ button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.CNPJ input,
+.CNPJ button {
+    letter-spacing: 0.1rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.CNPJ input {
+    border-radius: 5px;
+    border: transparent;
+    margin-bottom: 0.5rem;
 }

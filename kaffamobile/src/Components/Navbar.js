@@ -19,7 +19,7 @@ class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <ul className="navbar-nav">
                             <NavLink exact className='newA' activeClassName='navActive' to='/1'>Solution 1</NavLink>
-                            <NavLink exact className='newA' activeClassName='navActive' to='/23'>Solution 2 / 3</NavLink>
+                            <NavLink exact className='newA' activeClassName='navActive' to='/23'>Solution 2 | 3</NavLink>
                             <NavLink exact className='newA' activeClassName='navActive' to='/4'>Solution 4</NavLink>
                             <NavLink exact className='newA' activeClassName='navActive' to='/5'>Solution 5</NavLink>
                             <NavLink exact className='newA' activeClassName='navActive' to='/6'>Solution 6</NavLink>
