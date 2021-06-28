@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import TwoRectangles from './TwoRectanglesIntersect/TwoRectangles';
 //import WorldClock from './RestClientWorldClock/WorldClock';
 //import CNPJ from './ValidateCNPJ/CNPJ';
+import ERDiagram from './ERDiagram/ERDiagram';
 
 // CSS
 import './TestHome.css';
@@ -20,7 +21,7 @@ class TestHome extends Component {
             <div className='TestHome'>
                 <Navbar />
                 <div className='TestHome-Page'>           
-                    <TwoRectangles />
+                    <ERDiagram />
                 </div>
             </div>
         );
