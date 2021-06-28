@@ -32,6 +32,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .NewRectForm-p label {
     font-weight: bold;
+    margin-right: 0.5rem;
 }
 
 .NewRectForm button {

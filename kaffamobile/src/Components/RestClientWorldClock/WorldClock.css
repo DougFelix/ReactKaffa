@@ -2,7 +2,7 @@
     margin: 4rem auto;
     padding: 2rem 2rem 2rem;
     max-width: 600px;
-    background: #a866ff;
+    background: #ff9260;
     color: white;
     box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
     overflow: hidden;
@@ -12,6 +12,8 @@
 
 .WorldClock-Date, .WorldClock-Time {
     font-family: 'Orbitron', sans-serif;
+    color: black;
+    font-weight: normal;
 }
 
 
@@ -25,6 +27,10 @@
     margin-bottom: 2rem;
 }
 
+.WorldClock-UTC {
+    font-weight: bolder;
+}
+
 .WorldClock button {
     padding: 0 1.3rem;
     border: none;
@@ -36,13 +42,15 @@
     cursor: pointer;
     transition: background 0.4s ease-out;
     outline: none;
+    letter-spacing: 0.1rem;
+    font-family: "Quicksand", sans-serif;
 }
 
 .WorldClock button:hover {
     background: rgba(0, 0, 0, 0.1);
 }
-.WorldClock input,
-.WorldClock button {
-    letter-spacing: 0.1rem;
-    font-family: "Quicksand", sans-serif;
+
+.WorldClock-Local {
+    padding: 1rem;
 }
+

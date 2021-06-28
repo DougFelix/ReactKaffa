@@ -30,16 +30,21 @@ class CNPJ extends Component {
         this.setState({isValid: isValid});
     }
 
-    render() { 
+    render() {
+        let style = {
+            color: this.state.isValid ? 'green' : 'red'
+        }
+
         return (
             <div className='CNPJ'>
                 <form className='CNPJ-Form' onSubmit={this.handleSubmit}>
                     <div className='CNPJ-Title'>CNPJ</div>
+                    <div className='CNPJ-info'>Validate CNPJ format and check digits:</div>
                     <input name='cnpj' value={this.state.cnpj} type='text' onChange={this.handleChange} required></input>
                     <button>Check</button>
                 </form>
                 {this.state.isValid !== '' 
-                ? <div> {this.state.isValid === true
+                ? <div className='CNPJ-validation' style={style}> {this.state.isValid === true
                     ? 'VALID CNPJ'
                     : 'INVALID CNPJ'
                     }

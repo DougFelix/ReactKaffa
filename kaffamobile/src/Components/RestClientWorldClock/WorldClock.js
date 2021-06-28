@@ -39,17 +39,21 @@ class WorldClock extends Component {
         return (
             <div className='WorldClock'>
             <div className='WorldClock-Title'>World Clock</div>
-                <div className='WorldClock-UTC'>
-                    <i className="far fa-clock"></i> UTC: 
-                    <div className="WorldClock-Date">{this.state.utcDate}</div>
-                    <div className="WorldClock-Time">{this.state.utcTime}</div>
+            {this.state.utcDate === '' ? '' :
+                <div>
+                    <div className='WorldClock-UTC'>
+                        <i className="far fa-clock"></i> UTC: 
+                        <div className="WorldClock-Date">{this.state.utcDate}</div>
+                        <div className="WorldClock-Time">{this.state.utcTime}</div>
+                    </div>
+                    <div className='WorldClock-Local'>
+                        <i className="fas fa-clock"></i> LOCAL: 
+                        <div className="WorldClock-Date">{this.state.localDate}</div>
+                        <div className="WorldClock-Time">{this.state.localTime}</div>
+                    </div>
                 </div>
-                <div className='WorldClock-Local'>
-                    <i className="fas fa-clock"></i> LOCAL: 
-                    <div className="WorldClock-Date">{this.state.localDate}</div>
-                    <div className="WorldClock-Time">{this.state.localTime}</div>
-                </div>
-                <button onClick={this.getTime}>GET DATETIME</button>
+            }
+                <button onClick={this.getTime}>GET DATE / TIME</button>
             </div>
         );
     }
