@@ -1,0 +1,59 @@
+.RESTServer {
+    margin: 4rem auto;
+    padding: 2rem 2rem 2rem;
+    max-width: 600px;
+    background: #ff9260;
+    color: white;
+    box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
+    overflow: hidden;
+    font-size: 1.1rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.RESTServer-Date, .RESTServer-Time {
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    font-weight: normal;
+}
+
+
+.RESTServer-Title {
+    font-weight: normal;
+    font-size: 2.6rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 2rem;
+}
+.RESTServer-info {
+    white-space: pre-line;
+    margin-bottom: 1rem;
+}
+.RESTServer-UTC {
+    font-weight: bolder;
+}
+
+.RESTServer button {
+    padding: 0 1.3rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background 0.4s ease-out;
+    outline: none;
+    letter-spacing: 0.1rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.RESTServer button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.RESTServer-Local {
+    padding: 1rem;
+}
+
