@@ -1,5 +1,8 @@
 .Table {
+
     margin: 1rem;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .Rectangles-Draw {

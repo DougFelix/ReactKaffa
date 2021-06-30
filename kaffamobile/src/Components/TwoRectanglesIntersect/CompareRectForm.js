@@ -57,7 +57,7 @@ class CompareRectForm extends Component {
                     <select name='rect1' value={this.state.rect1} onChange={this.handleChange}>
                         {options}
                     </select>
-                    <i class="fas fa-times"></i>
+                    <i className="fas fa-times"></i>
                     <select name='rect2' value={this.state.rect2} onChange={this.handleChange}>
                         {options}
                     </select>
