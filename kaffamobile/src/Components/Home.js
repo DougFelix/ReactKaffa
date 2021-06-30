@@ -8,9 +8,10 @@ import Navbar from './Navbar';
 import CNPJ from './ValidateCNPJ/CNPJ';
 import TwoRectangles from './TwoRectanglesIntersect/TwoRectangles';
 import TodoList from './TodoList/TodoList';
-import WorldClock from './RestClientWorldClock/WorldClock';
+import WorldClock from './RestClient/WorldClock';
 import ERDiagram from './ERDiagram/ERDiagram';
 import RESTServer from './RESTServer/RESTServer';
+import UXPrototype from './UXPrototype/UXPrototype';
 
 // CSS
 import './Home.css';
@@ -32,7 +33,7 @@ class TestHome extends Component {
                         <Route exact path='/5' render={() => <WorldClock />} />
                         <Route exact path='/6' render={() => <RESTServer />} />
                         <Route exact path='/7' render={() => <ERDiagram />} />
-                        <Route exact path='/8' render={() => <Home />} />
+                        <Route exact path='/8' render={() => <UXPrototype />} />
                     </Switch>         
                 </div>
             </div>
