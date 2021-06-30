@@ -21,8 +21,8 @@ class Navbar extends Component {
                             <NavLink exact className='newA' activeClassName='navActive' to='/1'>Solution 1</NavLink>
                             <NavLink exact className='newA' activeClassName='navActive' to='/23'>Solution 2 | 3</NavLink>
                             <NavLink exact className='newA' activeClassName='navActive' to='/4'>Solution 4</NavLink>
-                            <NavLink exact className='newA' activeClassName='navActive' to='/5'>Solution 5</NavLink>
-                            <NavLink exact className='newA' activeClassName='navActive' to='/6'>Solution 6</NavLink>
+                            <NavLink exact className='newA' activeClassName='navActive' to='/56'>Solution 5 | 6</NavLink>
+                            {/* <NavLink exact className='newA' activeClassName='navActive' to='/67'>Solution 6</NavLink> */}
                             <NavLink exact className='newA' activeClassName='navActive' to='/7'>Solution 7</NavLink>
                             <NavLink exact className='newA' activeClassName='navActive' to='/8'>Solution 8</NavLink>
                         </ul>

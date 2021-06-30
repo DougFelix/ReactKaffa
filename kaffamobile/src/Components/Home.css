@@ -10,16 +10,31 @@
     justify-content: center;
 }
 
-
-
 .Home {
     margin: 4rem auto;
+    max-width: 400px;
     padding: 2rem 2rem 2rem;
-    max-width: 600px;
-    background: rgb(255, 255, 255);
-    color: black;
+    background: linear-gradient(90deg, 
+    #e866ff 16.66%,
+    #5b97e6 16.66%, 33.32%,
+    #79f86e 33.32%, 49.98%,
+    #ffe866 49.98%, 66.64%,
+    #ff9260 66.64%, 83.3%,
+    #ff6060 83.3%);
+    color: white;
     box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
     overflow: hidden;
     font-size: 1.1rem;
     font-family: 'Ubuntu', sans-serif;
+}
+
+
+.Home-Title {
+    font-weight: normal;
+    font-size: 2.6rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 2rem;
 }

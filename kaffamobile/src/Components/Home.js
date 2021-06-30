@@ -16,7 +16,7 @@ import UXPrototype from './UXPrototype/UXPrototype';
 // CSS
 import './Home.css';
 
-const Home = () => <p className='Home'> HOME PAGE </p>;
+const Home = () => <div className='Home'> <div className='Home-Title'>HOME PAGE</div></div>;
 
 class TestHome extends Component {
 
@@ -30,8 +30,8 @@ class TestHome extends Component {
                         <Route exact path='/1' render={() => <CNPJ />} />
                         <Route exact path='/23' render={() => <TwoRectangles />} />
                         <Route exact path='/4' render={() => <TodoList />} />
-                        <Route exact path='/5' render={() => <WorldClock />} />
-                        <Route exact path='/6' render={() => <RESTServer />} />
+                        <Route exact path='/56' render={() => <WorldClock />} />
+                        {/* <Route exact path='/6' render={() => <RESTServer />} /> */}
                         <Route exact path='/7' render={() => <ERDiagram />} />
                         <Route exact path='/8' render={() => <UXPrototype />} />
                     </Switch>         

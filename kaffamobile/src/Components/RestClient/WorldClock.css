@@ -1,9 +1,9 @@
 .WorldClock {
     margin: 4rem auto;
     padding: 2rem 2rem 2rem;
-    max-width: 600px;
-    background: #ff9260;
-    color: white;
+    width: 400px;
+    background: #ffe866;
+    color: black;
     box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
     overflow: hidden;
     font-size: 1.1rem;
@@ -21,7 +21,7 @@
     font-weight: normal;
     font-size: 2.6rem;
     letter-spacing: 0.05em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
     font-family: "Quicksand", sans-serif;
     margin-bottom: 2rem;
@@ -32,13 +32,13 @@
 }
 
 .WorldClock button {
-    padding: 0 1.3rem;
+    width: 100%;
     border: none;
     background: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: black;
     text-transform: uppercase;
     font-weight: bold;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: background 0.4s ease-out;
     outline: none;
@@ -54,3 +54,28 @@
     padding: 1rem;
 }
 
+.WorldClock-data{
+    padding-top: 1rem;
+}
+
+
+/* TOGGLE switch */
+
+.WorldClock-Switch {
+    line-height: 34px;
+    text-align: left;
+    height: 6rem;
+    padding-bottom: 1rem;
+}
+
+.switch-Text {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.WorldClock-Switch select {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: "Quicksand", sans-serif;
+    border: transparent;
+}

@@ -4,6 +4,11 @@ import axios from 'axios';
 //CSS
 import './WorldClock.css';
 
+// API URLs
+const worldclockapi = 'http://worldclockapi.com/api/json/utc/now';
+const localapi = 'http://127.0.0.1:8000/currentDateTime';
+
+
 class WorldClock extends Component {
     constructor(props) {
         super(props);
@@ -11,14 +16,27 @@ class WorldClock extends Component {
             localDate: '',
             localTime: '',
             utcDate: '',
+            utcTime: '',
+            useLocalAPI: false
+        }
+        this.defaultState = {
+            localDate: '',
+            localTime: '',
+            utcDate: '',
             utcTime: ''
         }
+        
         this.getTime = this.getTime.bind(this);
+        this.handleSwitch = this.handleSwitch.bind(this);
     }
 
     async getTime() {
         try {
-            let response = await axios.get('http://worldclockapi.com/api/json/utc/now');
+            let response = await axios.get(
+                this.state.useLocalAPI
+                ? localapi
+                : worldclockapi
+            );
             let utcDateTime = response.data.currentDateTime;
 
             this.setState({
@@ -31,16 +49,40 @@ class WorldClock extends Component {
             })
         }
         catch (e) {
-            alert(e);
+            alert(e + ". Make sure to start REST Server properly.");
         }
+    }
+
+    handleSwitch(){
+        this.setState(st => ({
+            useLocalAPI: !st.useLocalAPI,
+            ...this.defaultState
+        }));
     }
 
     render() { 
         return (
             <div className='WorldClock'>
             <div className='WorldClock-Title'>World Clock</div>
+            <div className='WorldClock-Switch'>
+                <select value={this.state.rect1} onChange={this.handleSwitch}>
+                    <option value={false}>Exercise 5: Server URL</option>
+                    <option value={true}>Exercise 6: REST Server</option>
+                </select>
+                {this.state.useLocalAPI
+                ?   <span className='switch-Text'>
+                        http://127.0.0.1:8000/currentDateTime
+                        <div><strong>Import:</strong> Start Local REST Server before testing.</div>
+                    </span>
+                :   <span className='switch-Text'>
+                        http://worldclockapi.com/api/json/utc/now
+                    </span>
+                }
+            </div>
+            <hr/>
+            <button onClick={this.getTime}>GET DATE / TIME</button>
             {this.state.utcDate === '' ? '' :
-                <div>
+                <div className='WorldClock-data'>
                     <div className='WorldClock-UTC'>
                         <i className="far fa-clock"></i> UTC: 
                         <div className="WorldClock-Date">{this.state.utcDate}</div>
@@ -52,8 +94,7 @@ class WorldClock extends Component {
                         <div className="WorldClock-Time">{this.state.localTime}</div>
                     </div>
                 </div>
-            }
-                <button onClick={this.getTime}>GET DATE / TIME</button>
+            }                
             </div>
         );
     }
