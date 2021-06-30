@@ -9,7 +9,7 @@ class Table extends Component {
     listMaker() {
         let listRect = [];
         let {Rectangles} = this.props;
-
+        // ADD EVERY RECTANGLE TO THE LIST
         for (var rect in Rectangles) {
             listRect.push(
                 <li className='Rectangles-List-Item' key={rect}>
@@ -24,24 +24,31 @@ class Table extends Component {
         let map = []
         let {table} = this.props;
         for(let i = table.length-1; i >= 0; i--) {
+            // CREATING ROWS (Y)
             let row = [];
+            // ADDING 'Y' LABEL
             row.push(<th key={`${i}y`}>{i}</th>);
             for (let j = 0; j < table[0].length; j++) {
-                let coord = `${i}-${j}`;
+                //CREATING COLS (X)
+                let coord = `${j}-${i}`;
+                // DEFINING ALPHA VALUE
                 let alpha = (
-                    table[i][j] === 0 
-                    ? ( 0.03 )
-                    : ( table[i][j]*0.3 )
+                    table[j][i] === 0 
+                    ? ( 0.05 )
+                    : ( table[j][i]*0.3 )
                 );
                 // CSS DEFINING RECTANGLE STYLE
                 let style = {
                     color: `rgba(0, 0, 0,${alpha})`
                 };
+                // ADDING X TO ROW
                 row.push(<td key={coord}><i style={style} className="fas fa-square"></i></td>)
             }
+            // ADDING ROW TO TABLE
             map.push(<tr key={`${i}row`}>{row}</tr>);
         }
 
+        // ADDING 'X' LABEL
         let footer =[];
         footer.push(<th key={`#`} style={{fontSize: 10}}>Y / X</th>);
         for (let j = 0; j < table[0].length; j++) {
@@ -57,8 +64,10 @@ class Table extends Component {
     }
 
     render() {
-        let {Rectangles} = this.props;  
+        let {Rectangles} = this.props; 
+        // CREATING GRID
         let map = this.gridMaker();
+        // CREATING LIST WITH ALL RECTANGLES COORDINATES
         let listRect = this.listMaker();
 
         return (
