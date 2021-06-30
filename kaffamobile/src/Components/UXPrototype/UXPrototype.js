@@ -11,7 +11,7 @@ class UXPrototype extends Component {
             <div className='UXPrototype'>
                 <div className='UXPrototype-Title'>UX Prototype</div>
                 <div className='UXPrototype-awnsers'>
-                    <p>Design and prototype a screen for creating new projects. Each project needs to have the following informations, provided by the user:</p>
+                    <div>Screen for creating new projects. Informations provided by the user:</div>
                     <ul>
                         <li>Project name (text)</li>
                         <li>Project deadline (date)</li>
