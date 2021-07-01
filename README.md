@@ -54,7 +54,7 @@ Start Server
 
 <hr>
 
-## Solution 1 - :pager: Validade CPNJ
+## Solution 1 - :pager: Validate CPNJ
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/ValidateCNPJ/
 
@@ -244,8 +244,8 @@ design.
 <hr>
 
 ##### In this project I used: 
-uuidv4 - https://www.npmjs.com/package/uuidv4 - Generate keys
-fontawesome - https://fontawesome.com/ - Icons
-axios - https://www.npmjs.com/package/axios - fetch data
-react-router-dom - https://reactrouter.com/web/guides/quick-start
-bootstrap - npm install bootstrap
+* uuidv4 - https://www.npmjs.com/package/uuidv4 - Generate keys
+* fontawesome - https://fontawesome.com/ - Icons
+* axios - https://www.npmjs.com/package/axios - fetch data
+* react-router-dom - https://reactrouter.com/web/guides/quick-start
+* bootstrap - npm install bootstrap
