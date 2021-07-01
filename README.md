@@ -1,10 +1,3 @@
-uuidv4 - https://www.npmjs.com/package/uuidv4 - Generate keys
-fontawesome - https://fontawesome.com/ - Icons
-axios - https://www.npmjs.com/package/axios - fetch data
-react-router-dom - https://reactrouter.com/web/guides/quick-start
-bootstrap - npm install bootstrap
-
-
 # Kaffa Mobile :iphone:
 Pre-qualification test (v1.10)
 
@@ -61,7 +54,7 @@ Start Server
 
 <hr>
 
-## Solucion 1 - :pager: Validade CPNJ
+## Solution 1 - :pager: Validade CPNJ
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/ValidateCNPJ/
 
@@ -83,7 +76,7 @@ Important: Don't use a library. You should write the validation code.
 
 <hr>
 
-## Solucion 2 and 3 - :black_square_button: Two Rectangles
+## Solution 2 and 3 - :black_square_button: Two Rectangles
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/TwoRectangles/
 
@@ -131,7 +124,7 @@ After inserting at least two rectangles, you can analyze rectangles to determine
 
 <hr>
 
-## Solucion 4 - :ballot_box_with_check: ToDo List
+## Solution 4 - :ballot_box_with_check: ToDo List
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/TodoList/
 
@@ -152,7 +145,7 @@ The list will be stored in localStorage.
 
 <hr>
 
-## Solucion 5 and 6 - :clock2: World Clock
+## Solution 5 and 6 - :clock2: World Clock
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/WorldClock/
 
@@ -197,7 +190,7 @@ After the LOCAL server WorldClockAPI is running the result is as followed:
 
 <hr>
 
-## Solucion 7 - :clipboard: Entity Relationship Diagram - Simple Order Manager
+## Solution 7 - :clipboard: Entity Relationship Diagram - Simple Order Manager
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/ERDiagram/
 
@@ -224,7 +217,7 @@ Note: this exercise is documentation only - there's no executable to run in this
 
 <hr>
 
-## Solucion 8 - :construction: UX Prototype - New Project Screen
+## Solution 8 - :construction: UX Prototype - New Project Screen
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/UXPrototype/
 
@@ -249,3 +242,10 @@ design.
 </p>
 
 <hr>
+
+##### In this project I used: 
+uuidv4 - https://www.npmjs.com/package/uuidv4 - Generate keys
+fontawesome - https://fontawesome.com/ - Icons
+axios - https://www.npmjs.com/package/axios - fetch data
+react-router-dom - https://reactrouter.com/web/guides/quick-start
+bootstrap - npm install bootstrap
