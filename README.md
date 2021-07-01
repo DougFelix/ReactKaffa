@@ -9,8 +9,8 @@ bootstrap - npm install bootstrap
 Pre-qualification test (v1.10)
 
 #### Description:
-My solutions were made using REACT Js, mainly, and Django (REST Server Exercise).
-I made a single application that holds all solucions as different components.
+My solutions were made using *React*, mainly, and *Django* (REST Server Exercise).
+I made a single application that holds all solutions as different components.
 Some exercises had similar ideas so I merged them:
 
 * Exercise 1 and Exercise 2;
@@ -18,9 +18,43 @@ Some exercises had similar ideas so I merged them:
 
 I added the solution to Exercises 7 and 8 to the APP as well, even it being documentation only.
 
-#### How to run the application
+# `Getting Started`
+
+Instructions on how to build and run the solutions.
+- Clone Repository: https://github.com/DougFelix/ReactKaffa
+
+### Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Change to project directory:
+##### `cd kaffamobile`
+
+Install node modules:
+##### `npm install`
+
+In the project directory, run:
+##### `npm start`
+
+It runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### Django - Python
 
 
+Install [Python / pip](https://www.python.org/downloads/).
+
+Install Django:
+##### pip3 install Django
+
+Install CORS Headers allows the resources from the server to be accessed on other domains (React App - Solution 6).
+##### pip install django-cors-headers
+
+Change to Server directory:
+##### `cd WorldClockAPI`
 
 <hr>
 
@@ -151,7 +185,7 @@ REST server returning a JSON like:
 
 <hr>
 
-## Solucion 7 - ToDo List
+## Solucion 7 - Entity Relationship Diagram - Simple Order Manager
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/ERDiagram/
 
@@ -177,6 +211,35 @@ Note: this exercise is documentation only - there's no executable to run in this
 
 <p align="left">
   <img src="gif/solution7.gif" alt='Solution 7'/>
+</p>
+
+<hr>
+
+## Solucion 8 - UX Prototype - New Project Screen
+
+:file_folder: ./ReactKaffa/kaffamobile/src/Components/UXPrototype/
+
+#### Exercise:
+
+**8** - UX - Prototype (Optional - Designers / frontend developers only)
+Suppose you are working on an app that uses maps for managing and designing new electric networks
+(poles, wire segments, transformers, substations...). The user of your app needs to create a project in order
+to design new elements in the electric network.
+Design and prototype a screen for creating new projects. Each project needs to have the following
+informations, provided by the user:
+* Project name (text)
+* Project deadline (date)
+* Project location. The user has to point a location on the map
+
+Note: You can use any tools you want for drawing and prototyping, even pencil and paper. The result of this
+test does not need to be an interactive prototype. You can share just screenshots or pictures of your
+design.
+
+#### Description:
+
+
+<p align="left">
+  <img src="gif/solution8.gif" alt='Solution 8'/>
 </p>
 
 <hr>
