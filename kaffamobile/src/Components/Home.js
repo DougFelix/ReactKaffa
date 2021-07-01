@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -40,6 +40,7 @@ class TestHome extends Component {
                         <Route exact path='/56' render={() => <WorldClock />} />
                         <Route exact path='/7' render={() => <ERDiagram />} />
                         <Route exact path='/8' render={() => <UXPrototype />} />
+                        <Redirect to="/" />
                     </Switch>         
                 </div>
             </div>
