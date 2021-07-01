@@ -12,6 +12,16 @@ Some exercises had similar ideas so I merged them:
 I added the solution to Exercises 7 and 8 to the APP as well, even it being documentation only.
 Before testing Solution 6 it is necessary to run the REST Server [WorldClockAPI](https://github.com/DougFelix/ReactKaffa#round_pushpin-django---python)
 
+
+- [Solution 1](https://github.com/DougFelix/ReactKaffa#solution-1---pager-validate-cpnj)
+- [Solution 2 | 3](https://github.com/DougFelix/ReactKaffa#solution-2-and-3---black_square_button-two-rectangles)
+- [Solution 4](https://github.com/DougFelix/ReactKaffa#solution-4---ballot_box_with_check-todo-list)
+- [Solution 5 | 6](https://github.com/DougFelix/ReactKaffa#solution-5-and-6---clock2-world-clock)
+- [Solution 7](https://github.com/DougFelix/ReactKaffa#solution-7---clipboard-entity-relationship-diagram---simple-order-manager)
+- [Solution 8](https://github.com/DougFelix/ReactKaffa#solution-8---construction-ux-prototype---new-project-screen)
+
+
+
 # `Getting Started`
 
 Instructions on how to build and run the solutions.
