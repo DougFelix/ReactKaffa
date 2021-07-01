@@ -15,7 +15,15 @@ import UXPrototype from './UXPrototype/UXPrototype';
 // CSS
 import './Home.css';
 
-const Home = () => <div className='Home'> <div className='Home-Title'>HOME PAGE</div></div>;
+// HOME PAGE
+const Home = () => 
+    <div className='Home'>
+        <div className='Home-Title'>HOME PAGE</div>
+        Solutions to Kaffa Mobile - Pre-qualification test (v1.10) made with React and Django.
+        For more information consult the README file in the repository:
+        https://github.com/DougFelix/ReactKaffa
+    </div>
+;
 
 class TestHome extends Component {
 

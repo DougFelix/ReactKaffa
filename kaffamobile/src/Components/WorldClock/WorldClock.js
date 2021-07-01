@@ -19,6 +19,8 @@ class WorldClock extends Component {
             utcTime: '',
             useLocalAPI: false
         }
+
+        // DEFAULT STATE TO RESET TO
         this.defaultState = {
             localDate: '',
             localTime: '',
@@ -32,11 +34,13 @@ class WorldClock extends Component {
 
     async getTime() {
         try {
+            // FETCH DATA FROM API
             let response = await axios.get(
                 this.state.useLocalAPI
                 ? localapi
                 : worldclockapi
             );
+            // EXTRACT DATETIME-UTC
             let utcDateTime = response.data.currentDateTime;
 
             this.setState({
@@ -53,6 +57,7 @@ class WorldClock extends Component {
         }
     }
 
+    // HANDLE WHICH SERVER WAS SELECTED AND SET IN STATE
     handleSwitch(){
         this.setState(st => ({
             useLocalAPI: !st.useLocalAPI,

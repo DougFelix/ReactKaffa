@@ -15,7 +15,7 @@ class CNPJ extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    // FORM FUNCTIONS
+    // HANDLE INPUT CHANGE IN FORM
     handleChange(e){
         this.setState({
             [e.target.name]: e.target.value,
@@ -23,14 +23,16 @@ class CNPJ extends Component {
         });
     }
 
-    handleSubmit(e){
+    // CALL FUNCTION validateCNPJ IN helpers.js TO CHECK IF ENTRY IS VALID
+    handleSubmit(e){ 
         e.preventDefault();
-        //TODO
         let isValid = validateCNPJ(this.state.cnpj);
+        // SET STATE EQUAL TO VALIDATION RESULT
         this.setState({isValid: isValid});
     }
 
     render() {
+        // DEFINE RESULT STYLE
         let style = {
             color: this.state.isValid ? 'green' : 'red'
         }

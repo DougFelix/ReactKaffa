@@ -9,7 +9,7 @@ bootstrap - npm install bootstrap
 Pre-qualification test (v1.10)
 
 #### Description:
-My solutions were made using *React*, mainly, and *Django* (REST Server Exercise).
+My solutions were made using *React*, mainly, and *Django* (used in Exercise 6 - REST Server ).
 I made a single application that holds all solutions as different components.
 Some exercises had similar ideas so I merged them:
 
@@ -17,7 +17,7 @@ Some exercises had similar ideas so I merged them:
 * Exercise 5 and Exercise 6.
 
 I added the solution to Exercises 7 and 8 to the APP as well, even it being documentation only.
-Before testing solution 6 it is necessary to run the REST Server [WorldClockAPI](https://github.com/DougFelix/ReactKaffa#django---python)
+Before testing Solution 6 it is necessary to run the REST Server [WorldClockAPI](https://github.com/DougFelix/ReactKaffa#round_pushpin-django---python)
 
 # `Getting Started`
 
@@ -44,7 +44,6 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### :round_pushpin: Django - Python
-
 
 Install [Python and pip](https://www.python.org/downloads/).
 
@@ -76,8 +75,6 @@ Number only:
 "00000000000000"
 Validate if it's a well-formed CNPJ, considering the "check digits", as defined by Receita Federal.
 Important: Don't use a library. You should write the validation code.
-
-#### Description:
 
 
 <p align="left">
@@ -123,7 +120,10 @@ areaOfIntersection(A, B) = 15
 areaOfIntersection(A, C) = 1
 
 #### Description:
-
+In the application you can insert multiple rectangles by defining two points [x, y]. Each rectangle will be marked in the grid bellow.
+If they overlap the point will be darker.
+Every rectangle and its coordinates will be listed below.
+After inserting at least two rectangles, you can analyze rectangles to determine if they intersect and compute the area of intersection.
 
 <p align="left">
   <img src="gif/solution23.gif" alt='Solution 2 3'/>
@@ -143,7 +143,8 @@ The application must persist the tasks between executions;
 Use any storage you want: database, files, PaaS backends (Firebase, etc.);
 
 #### Description:
-
+Create a TODO list, add and delete new TODOs.
+The list will be stored in localStorage.
 
 <p align="left">
   <img src="gif/solution4.gif" alt='Solution 4'/>
@@ -169,20 +170,27 @@ REST server returning a JSON like:
 }
 
 #### Description:
+Select which Server you want to GET data from.
 
+If you select the server provided in the Exercise 5:
 
 <p align="left">
   <img src="gif/solution5.gif" alt='Solution 5'/>
 </p>
 
+If you select the Exercise 6 option, REST Server, without running it first, the following error will appear.
 <p align="left">
   <img src="gif/solution6-try.gif" alt='Solution 6-try'/>
 </p>
 
+To learn how to run it, check [WorldClockAPI](https://github.com/DougFelix/ReactKaffa#round_pushpin-django---python).
+
+The expected response from 'http://127.0.0.1:8000/currentDateTime' will be like:
 <p align="left">
   <img src="gif/solution6-resp.gif" alt='Solution 6-resp'/>
 </p>
 
+After the LOCAL server WorldClockAPI is running the result is as followed: 
 <p align="left">
   <img src="gif/solution6.gif" alt='Solution 6'/>
 </p>
@@ -210,9 +218,6 @@ Extras:
 
 Note: this exercise is documentation only - there's no executable to run in this case.
 
-#### Description:
-
-
 <p align="left">
   <img src="gif/solution7.gif" alt='Solution 7'/>
 </p>
@@ -238,9 +243,6 @@ informations, provided by the user:
 Note: You can use any tools you want for drawing and prototyping, even pencil and paper. The result of this
 test does not need to be an interactive prototype. You can share just screenshots or pictures of your
 design.
-
-#### Description:
-
 
 <p align="left">
   <img src="gif/solution8.gif" alt='Solution 8'/>

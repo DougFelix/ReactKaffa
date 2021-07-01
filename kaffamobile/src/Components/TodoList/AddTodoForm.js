@@ -13,15 +13,18 @@ class AddTodoForm extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
+    // Change specific state to typed value
     handleChange(e){
         this.setState({
             [e.target.name]: e.target.value
         });
     }
 
+    // Call AddTodo function from TodoList.js
     handleSubmit(e){
         e.preventDefault();
         this.props.addTodo(this.state);
+        //Clear state
         this.setState({todo: ''});
     }
 

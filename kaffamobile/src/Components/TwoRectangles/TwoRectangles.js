@@ -24,13 +24,15 @@ class TwoRectangles extends Component {
 
     addRectangle(rectPoints){
         let rect = [];
+        // SORT Xs values
         let x = [rectPoints.x1, rectPoints.x2].sort(function(a, b) {
             return a - b;
         });;
+        // SORT Ys values
         let y = [rectPoints.y1, rectPoints.y2].sort(function(a, b) {
             return a - b;
         });;
-
+        // MATRIX X Y
         for(let i = parseInt(x[0]); i <= parseInt(x[1]); i++) {
             for(let j = parseInt(y[0]); j <= parseInt(y[1]); j++) {
                 // getting each point inside of rectangle
@@ -59,7 +61,7 @@ class TwoRectangles extends Component {
         });
     }
 
-    //MAP FUNCTIONS
+    //MOUNT EMPTY GRID - FULL OF ZEROS
     mount(){
         var matrix = [];
         for (var i = 0; i < this.props.maxSize; i++) {
@@ -79,28 +81,6 @@ class TwoRectangles extends Component {
         for (var point of newRectangle) {
             table[point[0]][point[1]] += 1;
         }
-
-        // CODE TO ONLY DRAW PERIMETER
-        // let x = [rectPoints.x1, rectPoints.x2].sort(function(a, b) {
-        //     return a - b;
-        // });;
-        // let y = [rectPoints.y1, rectPoints.y2].sort(function(a, b) {
-        //     return a - b;
-        // });;
-        
-        // for(let i = parseInt(x[0]); i <= parseInt(x[1]); i++) {
-        //     table[i][rectPoints.y1] += 1;
-        //     table[i][rectPoints.y2] += 1;
-        // }
-        // for(let j = parseInt(y[0]); j <= parseInt(y[1]); j++) {
-        //     table[rectPoints.x1][j] += 1;
-        //     table[rectPoints.x2][j] += 1;
-        // }
-
-        // table[rectPoints.x1][rectPoints.y1] -= 1;
-        // table[rectPoints.x1][rectPoints.y2] -= 1;
-        // table[rectPoints.x2][rectPoints.y1] -= 1;
-        // table[rectPoints.x2][rectPoints.y2] -= 1;
 
         return table;
     }

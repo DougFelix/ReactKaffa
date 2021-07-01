@@ -12,6 +12,7 @@ class TodoList extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            //MOUNT empty list or load from localstorage
             todos: this.mount()
         }
         this.addTodo = this.addTodo.bind(this);

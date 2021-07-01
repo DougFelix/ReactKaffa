@@ -18,6 +18,7 @@ class CompareRectForm extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
+    // CONTROL CHANGE IN THE SELECT INPUT AND CLEAR PREVIOUS INFORMATION
     handleChange(e){
         this.setState({
             [e.target.name]: e.target.value,
@@ -29,7 +30,9 @@ class CompareRectForm extends Component {
     handleSubmit(e){
         e.preventDefault();
         let {Rectangles} = this.props;
+        // GET COMMON POINTS BETWEEN RECTANGLES
         var intersectPoints = this.getIntersection(Rectangles[this.state.rect1]['points'], Rectangles[this.state.rect2]['points']);
+        // CONVERT STRING COORDINATES TO INTEGER ARRAY [ X , Y ]
         let newIntersect = intersectPoints.map(point => point.split(',').map( x => parseInt(x)));
         this.setState({
             intersect: newIntersect.length > 0 ? 'true' : 'false',
@@ -37,7 +40,8 @@ class CompareRectForm extends Component {
         })
     }
 
-    getIntersection(a1,a2){
+    // TEST IF THERE ARE COMMOM POINTS BETWEEN TWO RECTANGLES AND RETURN THEM
+    getIntersection(a1, a2){
         return  a1.filter((n) => { 
             return a2.indexOf(n) !== -1;
         });

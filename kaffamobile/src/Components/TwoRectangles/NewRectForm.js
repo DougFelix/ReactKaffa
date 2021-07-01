@@ -23,10 +23,12 @@ class NewRectForm extends Component {
         });
     }
 
+    // CALL FUNCTION addRectangle IN TwoRectangles.js passing the new rectangles coordinates
     handleSubmit(e){
         e.preventDefault();
         let newRect = {...this.state};
         this.props.addRectangle(newRect);
+        // CLEAR COORDINATES IN STATE
         this.setState({
             x1: 0,
             y1: 0,
