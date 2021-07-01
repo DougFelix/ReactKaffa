@@ -2,7 +2,7 @@
 Pre-qualification test (v1.10)
 
 #### Description:
-My solutions were made using *React*, mainly, and *Django* (used in Exercise 6 - REST Server ).
+My solutions were made using **React**, mainly, and **Django** (used in Exercise 6 - REST Server ).
 I made a single application that holds all solutions as different components.
 Some exercises had similar ideas so I merged them:
 
@@ -113,7 +113,7 @@ areaOfIntersection(A, B) = 15
 areaOfIntersection(A, C) = 1
 
 #### Description:
-In the application you can insert multiple rectangles by defining two points [x, y]. Each rectangle will be marked in the grid bellow.
+In the application you can insert multiple rectangles by defining two points [x, y]. Each rectangle will be marked in the grid.
 If they overlap the point will be darker.
 Every rectangle and its coordinates will be listed below.
 After inserting at least two rectangles, you can analyze rectangles to determine if they intersect and compute the area of intersection.
@@ -212,8 +212,14 @@ Extras:
 Note: this exercise is documentation only - there's no executable to run in this case.
 
 <p align="left">
-  <img src="gif/solution7.gif" alt='Solution 7'/>
+  <img src="gif/ERDiagram.png" alt='Solution 7'/>
 </p>
+
+**SQL: list ORDERS with number of items**
+`SELECT orders.id, SUM(ordered_products.quantity) FROM orders LEFT JOIN ordered_producs ON orders.id = ordered_producs.order_id GROUP BY orders.id;`
+
+**Which indexes should be created in this model?**
+`Primary keys (PK), Foreign Keys (FK), CPF and Products name.`
 
 <hr>
 
@@ -238,14 +244,5 @@ test does not need to be an interactive prototype. You can share just screenshot
 design.
 
 <p align="left">
-  <img src="gif/solution8.gif" alt='Solution 8'/>
+  <img src="gif/UXPrototype.png" alt='Solution 8'/>
 </p>
-
-<hr>
-
-##### In this project I used: 
-* uuidv4 - https://www.npmjs.com/package/uuidv4 - Generate keys
-* fontawesome - https://fontawesome.com/ - Icons
-* axios - https://www.npmjs.com/package/axios - fetch data
-* react-router-dom - https://reactrouter.com/web/guides/quick-start
-* bootstrap - npm install bootstrap
