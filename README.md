@@ -63,7 +63,7 @@ Start Server
 
 ## Solucion 1 - :pager: Validade CPNJ
 
-:file_folder: ./ReactKaffa/kaffamobile/src/Components/ValidadeCNPJ/
+:file_folder: ./ReactKaffa/kaffamobile/src/Components/ValidateCNPJ/
 
 #### Exercise:
 
