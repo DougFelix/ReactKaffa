@@ -5,7 +5,7 @@ react-router-dom - https://reactrouter.com/web/guides/quick-start
 bootstrap - npm install bootstrap
 
 
-# Kaffa Mobile
+# Kaffa Mobile :iphone:
 Pre-qualification test (v1.10)
 
 #### Description:
@@ -17,13 +17,14 @@ Some exercises had similar ideas so I merged them:
 * Exercise 5 and Exercise 6.
 
 I added the solution to Exercises 7 and 8 to the APP as well, even it being documentation only.
+Before testing solution 6 it is necessary to run the REST Server [WorldClockAPI](https://github.com/DougFelix/ReactKaffa#django---python)
 
 # `Getting Started`
 
 Instructions on how to build and run the solutions.
-- Clone Repository: https://github.com/DougFelix/ReactKaffa
+##### `Clone Repository: https://github.com/DougFelix/ReactKaffa`
 
-### Create React App
+### :round_pushpin: Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -42,23 +43,26 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### Django - Python
+### :round_pushpin: Django - Python
 
 
-Install [Python / pip](https://www.python.org/downloads/).
+Install [Python and pip](https://www.python.org/downloads/).
 
 Install Django:
-##### pip3 install Django
+##### `pip3 install Django`
 
 Install CORS Headers allows the resources from the server to be accessed on other domains (React App - Solution 6).
-##### pip install django-cors-headers
+##### `pip install django-cors-headers`
 
 Change to Server directory:
 ##### `cd WorldClockAPI`
 
+Start Server
+##### `python manage.py runserver`
+
 <hr>
 
-## Solucion 1 - Validade CPNJ
+## Solucion 1 - :pager: Validade CPNJ
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/ValidadeCNPJ/
 
@@ -82,7 +86,7 @@ Important: Don't use a library. You should write the validation code.
 
 <hr>
 
-## Solucion 2 and 3 - Two Rectangles
+## Solucion 2 and 3 - :black_square_button: Two Rectangles
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/TwoRectangles/
 
@@ -127,7 +131,7 @@ areaOfIntersection(A, C) = 1
 
 <hr>
 
-## Solucion 4 - ToDo List
+## Solucion 4 - :ballot_box_with_check: ToDo List
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/TodoList/
 
@@ -147,7 +151,7 @@ Use any storage you want: database, files, PaaS backends (Firebase, etc.);
 
 <hr>
 
-## Solucion 5 and 6 - World Clock
+## Solucion 5 and 6 - :clock2: World Clock
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/WorldClock/
 
@@ -185,7 +189,7 @@ REST server returning a JSON like:
 
 <hr>
 
-## Solucion 7 - Entity Relationship Diagram - Simple Order Manager
+## Solucion 7 - :clipboard: Entity Relationship Diagram - Simple Order Manager
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/ERDiagram/
 
@@ -215,7 +219,7 @@ Note: this exercise is documentation only - there's no executable to run in this
 
 <hr>
 
-## Solucion 8 - UX Prototype - New Project Screen
+## Solucion 8 - :construction: UX Prototype - New Project Screen
 
 :file_folder: ./ReactKaffa/kaffamobile/src/Components/UXPrototype/
 
